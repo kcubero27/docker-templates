@@ -4,8 +4,8 @@ services:
   php-fpm:
     build:
       context: ./php-fpm
-      args:
-        XDEBUG: ${XDEBUG}
+    env_file:
+      - .env
     volumes:
       - ../src:/var/www
       - ./php-fpm/conf.d/:/usr/local/etc/php/conf.d
@@ -13,8 +13,6 @@ services:
   nginx:
     build:
       context: ./nginx
-      args:
-        XDEBUG: ${XDEBUG}
     volumes:
       - ../src:/var/www
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
