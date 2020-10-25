@@ -47,6 +47,12 @@ Finally, configure the server. Go to : `Languages & Frameworks` > `PHP` > `Serve
 * `Host`: localhost
 * `Port`: 80. It needs to match with the exposed port of nginx
 * `Debugger`: Xdebug
-* `Use path mappings`: switch to true. Add the mapping between our src folder and /var/www inside the container. The container absolute path needs to match with the root folder specified in `docker-php-xdebug-nginx/docker/nginx/sites/default.conf`
+* `Use path mappings`: switch to true. Add the mapping between our src folder and /var/www/symfony inside the container. The container absolute path needs to match with the root folder specified in `docker/nginx/sites/default.conf`
 
 ![DBGp Proxy](./docs/images/capture-servers.png)
+
+# TODO
+[ ] Share MYSQL variables between docker/.env and symfony/.env
+[ ] Connect Symfony to MySQL
+[ ] Try the debugger
+[ ] Update capture
