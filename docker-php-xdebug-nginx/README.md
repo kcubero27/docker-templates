@@ -44,3 +44,6 @@ Finally, configure the server. Go to : `Languages & Frameworks` > `PHP` > `Serve
 * `Use path mappings`: switch to true. Add the mapping between our src folder and /var/www inside the container. The container absolute path needs to match with the root folder specified in `docker-php-xdebug-nginx/docker/nginx/sites/default.conf`
 
 ![DBGp Proxy](./docs/images/capture-servers.png)
+
+# TODO
+[ ] MySQL 
