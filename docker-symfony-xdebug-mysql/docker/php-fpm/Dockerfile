@@ -7,7 +7,9 @@ RUN apk add --no-cache $PHPIZE_DEPS
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug
 
-RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install \
+    mysqli \
+    pdo pdo_mysql
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer --version

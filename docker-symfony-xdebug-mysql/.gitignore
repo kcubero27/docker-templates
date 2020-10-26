@@ -1,0 +1,21 @@
+# Database
+/docker/database/data
+
+# Email spool folder
+/app/spool/*
+
+# Logs (Symfony4)
+/symfony/var/log/*
+!/symfony/var/log/.gitkeep
+
+# Parameters
+/symfony/app/config/parameters.yml
+/symfony/app/config/parameters.ini
+
+# Managed by Composer
+/symfony/app/bootstrap.php.cache
+/symfony/var/bootstrap.php.cache
+/symfony/bin/*
+!/symfony/bin/console
+!/symfony/bin/symfony_requirements
+/symfony/vendor/
